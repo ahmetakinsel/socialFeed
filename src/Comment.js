@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Comment = ({ post }) => {
-  const [name, setName] = useState("TypeSomething");
+  const [name, setName] = useState("");
 
   const handleName = (event) => {
     setName(event.target.value);
@@ -19,7 +19,7 @@ const Comment = ({ post }) => {
           <input
             type="text"
             placeholder="Type name"
-            onClick={handleName}
+            onChange={handleName}
           ></input>
           <p>{name}</p>
         </div>
